@@ -195,14 +195,14 @@
                 </table>
     
              <div class="buttonsubmit">
-                        <asp:Button Text="Submit" ID="btnSubmit" runat="server" CssClass="submitbutton" Width="147px" padding="0 10px" OnClick="btnSubmit_Click" /> 
+                        <asp:Button Text="Submit" ID="btnSubmit" runat="server" CssClass="submitbutton" Width="147px" OnClick="btnSubmit_Click" /> 
  
             </div>       
                 
 
 
           <div class="Sign-in">
-              Already have an  account? <a href="#"> Sign-in </a>
+              Already have an  account? <a href="UserLogin.aspx"> Sign-in </a>
          </div>
             </div>        
           
