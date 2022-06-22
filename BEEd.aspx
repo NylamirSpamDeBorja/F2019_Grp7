@@ -51,7 +51,7 @@
         <table>
            <tr>
                    
-                    <td"> 
+                    <td class="Post"> 
                         <asp:TextBox ID="Post" runat="server" />
                     </td>
                 </tr>
