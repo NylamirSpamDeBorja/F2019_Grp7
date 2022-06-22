@@ -31,3 +31,5 @@ c:\users\john\documents\visual studio 2015\Projects\WebCommunity\WebCommunity\bi
 c:\users\john\documents\visual studio 2015\Projects\WebCommunity\WebCommunity\obj\Debug\WebCommunity.csprojResolveAssemblyReference.cache
 c:\users\john\documents\visual studio 2015\Projects\WebCommunity\WebCommunity\obj\Debug\WebCommunity.dll
 c:\users\john\documents\visual studio 2015\Projects\WebCommunity\WebCommunity\obj\Debug\WebCommunity.pdb
+C:\Users\John\Documents\GitHub\F2019_Grp7\obj\Debug\WebCommunity.dll
+C:\Users\John\Documents\GitHub\F2019_Grp7\obj\Debug\WebCommunity.pdb

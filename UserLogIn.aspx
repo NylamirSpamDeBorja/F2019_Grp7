@@ -94,7 +94,7 @@
 
                 </table>
 
-               <asp:Button ID="Login" runat="server" Text="Login" CssClass="loginbutton" Width="102px" padding="0 10px" Height="28px" OnClick="Login_Click"/> 
+               <asp:Button ID="Login" runat="server" Text="Login" CssClass="loginbutton" Width="102px" Height="28px" OnClick="Login_Click"/> 
     </div>
 
       
