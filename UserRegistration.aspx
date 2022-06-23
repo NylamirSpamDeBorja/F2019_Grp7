@@ -6,6 +6,13 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+
+        .body {
+         background-image: url('Breaking-Story-HBCU-1024x576.png');  
+         background-repeat:no-repeat;  
+         background-attachment:fixed;  
+         background-size: cover;
+         } 
  
         .centerform {
             position:absolute;
@@ -57,8 +64,7 @@
         }
     </style>
 </head>
-<body style="background-image: url('Breaking-Story-HBCU-1024x576.png');  background-repeat:no-repeat;
-    background-attachment:fixed; background-size: cover;">
+<body class="body">
 
     <div class="centerform">
         <h1>Register</h1>

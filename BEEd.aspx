@@ -7,13 +7,20 @@
     <title></title>
 
     <style>
+
+      .body {
+       background-image: url('Breaking-Story-HBCU-1024x576.png');  
+       background-repeat:no-repeat;  
+       background-attachment:fixed;  
+       background-size: cover;
+       } 
       
       .navbar {
-      overflow: hidden;
-      background-color: #8A6E52;
-      margin-top:50px;
-     
-    }
+       overflow: hidden;
+       background-color: #8A6E52;
+       margin-top:50px;
+       }
+
      .navbar p{
       float: left;
       font-size: 20px;
@@ -24,7 +31,8 @@
       text-transform: uppercase;
       margin-left:15px;
       letter-spacing:3px;
-    }
+      }
+
     .navbar a {
       float: right;
       font-size: 18px;
@@ -33,10 +41,10 @@
       padding: 18px 14px;
       text-decoration: none;
       text-transform: uppercase;
-    }
+      }
     </style>
 </head>
-<body style = "background-image: url('Breaking-Story-HBCU-1024x576.png');   background-repeat:no-repeat;  background-attachment:fixed;  background-size: cover;">
+<body class="body">
 
       <div class="navbar">
         <p> Welcome to BEEd </p>
