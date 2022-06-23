@@ -66,6 +66,8 @@
       <form id="form1" runat="server">
 
          <div class ="table">
+              
+               <asp:HiddenField ID="hfUserId" runat="server" />
 
             <table>
                 <tr>
