@@ -33,7 +33,7 @@
       letter-spacing:3px;
       }
 
-    .navbar a {
+     .navbar a {
       float: right;
       font-size: 18px;
       color: white;
@@ -42,6 +42,8 @@
       text-decoration: none;
       text-transform: uppercase;
       }
+
+   
     </style>
 </head>
 <body class="body">
@@ -55,15 +57,7 @@
 
     <form id="form1" runat="server">
 
-    <div>
-        <table>
-           <tr>
-                   
-                    <td class="Post"> 
-                        <asp:TextBox ID="Post" runat="server" />
-                    </td>
-                </tr>
-        </table>
+     <div>
     </div>
     </form>
 </body>
