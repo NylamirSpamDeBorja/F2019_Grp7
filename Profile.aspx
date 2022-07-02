@@ -14,16 +14,19 @@
         }
         .wrapper{
         position: absolute;
-        top: 20%;
-        Left: 100%;
-        width:400px;
+        top: 50%;
+        Left: 50%;
+        transform: translate(-50%, -50%);
+        width:450px;
         display: flex;
+        box-shadow: 0 1px 20px 0 rgba(69, 90,100,0.08)
         }
         .wrapper .left{
-        width: 100%;
+        width: 35%;
         background: #8A6E52;
         padding: 30px 25px;
         border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         text-align: center;
         color: #fff;
         }
@@ -35,15 +38,17 @@
         margin-bottom: 10px;
         }
         .wrapper .right{
-        width: 150%;
+        width: 65%;
         background-color:#DBCABA; 
         padding: 30px 25px;
         border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding:30px 25px;
         text-align: center;
         color: #fff;
         }
         .wrapper .right .info h3{
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         padding-bottom: 5px;
         border-bottom: 1px solid #e0e0e0;
         color: #353c4e;
