@@ -3,6 +3,9 @@
   <PropertyGroup>
     <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Users\John\Documents\GitHub\F2019_Grp7\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\</ReferencePath>
+  </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
