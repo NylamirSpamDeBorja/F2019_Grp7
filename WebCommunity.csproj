@@ -128,6 +128,7 @@
   <ItemGroup>
     <Content Include="Breaking-Story-HBCU-1024x576.png" />
     <Content Include="header.png" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="welcomepage.html" />
     <Content Include="NewFolder1\Breaking-Story-HBCU-1024x576.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -276,6 +277,13 @@
       <DependentUpon>UserRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
