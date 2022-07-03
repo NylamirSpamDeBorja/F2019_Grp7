@@ -61,11 +61,11 @@
     <form id="form1" runat="server">
     <div class ="wrapper">
         <div class="left">
-            <img src="" alt="user" width="100"/>
+            <img src="user.png" alt="user" width="100"/>
             <h4>Name</h4>
             <h4>Username</h4>
             <ul>
-                <li><img src="edit.png"><a href="#">Edit Profile</a></li>
+                <li><img src="edit.png"><a href="edit settings">Edit Profile</a></li>
             </ul>
         </div>
         <div class="right">
@@ -74,9 +74,19 @@
                 <div class="info_data">
                     <div class="data">
                         <h4>Email</h4>
+                        <li><a href="Email.asp"></a></li>
                     </div>
                     <div class="data">
                         <h4>Course</h4>
+                        <li><a href="Course.asp"></a></li>
+                    </div>
+                    <div class="data">
+                        <h4>Gender</h4>
+                        <li><a href="Gender.asp"></a></li>
+                    </div>
+                    <div class="data">
+                        <h4>Birthday</h4>
+                        <li><a href="Birthday.asp"></a></li>
                     </div>
                 </div>
             </div>
