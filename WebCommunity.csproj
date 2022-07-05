@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="BEEd.aspx" />
     <Content Include="BSBA.aspx" />
     <Content Include="BSBM.aspx" />
@@ -112,6 +113,7 @@
     <Content Include="BSPSYCH.aspx" />
     <Content Include="BSTM.aspx" />
     <Content Include="BSTrM.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="UserLogIn.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="packages.config" />
@@ -135,6 +137,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BEEd.aspx.cs">
       <DependentUpon>BEEd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,6 +268,12 @@
     </Compile>
     <Compile Include="BSTrM.aspx.designer.cs">
       <DependentUpon>BSTrM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogIn.aspx.cs">
       <DependentUpon>UserLogIn.aspx</DependentUpon>
