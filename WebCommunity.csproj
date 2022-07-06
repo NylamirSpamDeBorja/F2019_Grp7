@@ -112,6 +112,8 @@
     <Content Include="BSPSYCH.aspx" />
     <Content Include="BSTM.aspx" />
     <Content Include="BSTrM.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="user.png" />
     <Content Include="UserLogIn.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="packages.config" />
@@ -261,6 +263,12 @@
     </Compile>
     <Compile Include="BSTrM.aspx.designer.cs">
       <DependentUpon>BSTrM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogIn.aspx.cs">
       <DependentUpon>UserLogIn.aspx</DependentUpon>

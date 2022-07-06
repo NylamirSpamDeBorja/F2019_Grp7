@@ -12,6 +12,31 @@
         background-attachment:fixed;  
         background-size: cover;
         }
+        .navbar {
+        overflow: hidden;
+        background-color: #8A6E52;
+        margin-top:50px;
+        }
+        .navbar p{
+        float: left;
+        font-size: 20px;
+        font-weight:bold;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left:15px;
+        letter-spacing:3px;
+        }
+        navbar a {
+        float: right;
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        padding: 18px 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        }
         .wrapper{
         position: absolute;
         top: 50%;
@@ -22,7 +47,8 @@
         box-shadow: 0 1px 20px 0 rgba(69, 90,100,0.08)
         }
         .wrapper .left{
-        width: 35%;
+        width: 500px;
+        height; 400px;
         background: #8A6E52;
         padding: 30px 25px;
         border-top-left-radius: 5px;
@@ -30,15 +56,18 @@
         text-align: center;
         color: #fff;
         }
-        .wrapper .left img{
+        .wrapper .left .img{
+        height: 200px;
+        width: 200px;
         margin-bottom: 10px;
-        border-radius: 5px;
+        border-radius: 50%;
         }
         .wrapper .left h4{
         margin-bottom: 10px;
         }
         .wrapper .right{
-        width: 65%;
+        width: 650px;
+        height; 400px;
         background-color:#DBCABA; 
         padding: 30px 25px;
         border-top-right-radius: 5px;
@@ -58,35 +87,33 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <p> Welcome to Student Webmmunity </p>
+        <a href="welcomepage.html">sign-out</a>
+        <a href="#">dashboard</a>
+        <a href="welcomepage.html">profile</a>
+    </div>
     <form id="form1" runat="server">
     <div class ="wrapper">
         <div class="left">
-            <img src="user.png" alt="user" width="100"/>
-            <h4>Name</h4>
-            <h4>Username</h4>
-            <ul>
-                <li><img src="edit.png"><a href="edit settings">Edit Profile</a></li>
-            </ul>
+            <img src="user.png" id="photo"> 
+            <h3>Username</h3>
         </div>
         <div class="right">
             <div class="info">
-                <h3>information</h3>
+                <h2>information</h2>
                 <div class="info_data">
                     <div class="data">
-                        <h4>Email</h4>
-                        <li><a href="Email.asp"></a></li>
+                        <h3>Email</h3>
                     </div>
                     <div class="data">
-                        <h4>Course</h4>
-                        <li><a href="Course.asp"></a></li>
+                        <h3>Course</h3>
                     </div>
                     <div class="data">
-                        <h4>Gender</h4>
-                        <li><a href="Gender.asp"></a></li>
+                        <h3>Gender</h3>
                     </div>
                     <div class="data">
-                        <h4>Birthday</h4>
-                        <li><a href="Birthday.asp"></a></li>
+                        <h3>Birthday</h3>
                     </div>
                 </div>
             </div>
