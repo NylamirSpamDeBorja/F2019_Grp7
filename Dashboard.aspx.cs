@@ -1,55 +1,89 @@
 ﻿using System;
-using System.Collection.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
+using System.Data;
 using System.Web.UI.DataVisualization.Charting;
+using System.Drawing;
 
-namespace Dashboard
+namespace WebCommunity
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            BindChart();
+        }
 
-            string query = string.Format("Select YrLevel, PopulationPerc from StudentPopulation where yrlevel <> '1st'", "PopulationPerc");
-            DataTable dt = GetData(query);
-            string[] x = new string[dt.Rows.Count];
-            int[] y = new int[dt.Rows.Count];
+        private void BindChart()
+        {
+            string connectionString = @"Data Source=QUINTOS-PC;Initial Catalog=UserSignUpDB;Integrated Security=True";
+            SqlConnection sqlCon = new SqlConnection(connectionString);
+            sqlCon.Open();
+            SqlCommand CMD = new SqlCommand("GetStudentYearChart", sqlCon);
+            CMD.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(CMD);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            DataTable ChartData = ds.Tables[0];
+
+            //storing total rows count to loop on each Record  
+            string[] XPointMember = new string[ChartData.Rows.Count];
+            int[] YPointMember = new int[ChartData.Rows.Count];
+
+            for (int count = 0; count < ChartData.Rows.Count; count++)
             {
-                x[i] = dt.Rows[i][0].ToString();
-                y[i] = Convert.ToInt32(dt.Rows[i][1]);
+                //storing Values for X axis  
+                XPointMember[count] = ChartData.Rows[count]["StudentYear"].ToString();
+                //storing values for Y Axis  
+                YPointMember[count] = Convert.ToInt32(ChartData.Rows[count]["Population"]);
+
             }
-            Chart1.Series[0].Points.DataBindXY(x, y);
-            Chart1.Series[0].CharType = SeriesCharType.Pie;
-            Chart1.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = false;
+            //binding chart control  
+            Chart1.Series[0].Points.DataBindXY(XPointMember, YPointMember);
 
-            Chart1.Legends[0].Enabled = true;
+            //Setting width of line  
+            Chart1.Series[0].BorderWidth = 10;
 
-        }
+            //setting Chart type   
+            Chart1.Series[0].ChartType = SeriesChartType.Pie;
 
-        private static DataTable GetData(string query)
-        {
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(query);
-            String constr = ConfigurationManager.ConnectionStrings["MyDBConnectionString"].ConnectionString;
-            SqlConnection con = new SqlConnection(constr);
-            SqlDataAdapter sda = new SqlDataAdapter();
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = con;
-            sda.SelectCommand = cmd;
-            sda.Fill(dt);
-            return dt;
-        }
 
-        protected void Chart1_Load(object sender, EventArgs e)
-        {
+            foreach (Series charts in Chart1.Series)
+            {
+                foreach (DataPoint point in charts.Points)
+                {
+                    switch (point.AxisLabel)
+                    {
+                        case "Q1":
+                            point.Color = Color.YellowGreen;
+                            break;
+                        case "Q2":
+                            point.Color = Color.Yellow;
+                            break;
+                        case "Q3":
+                            point.Color = Color.Red;
+                            break;
+                        case "Q4":
+                            point.Color = Color.SpringGreen;
+                            break;
+                        case "Q5":
+                            point.Color = Color.Green;
+                            break;
+                    }
+                    point.Label = string.Format("{0:0} - {1}", point.YValues[0], point.AxisLabel);
+
+                }
+            }
+
+            sqlCon.Close();
+
         }
     }
+
 }
+
